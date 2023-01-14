@@ -1,19 +1,19 @@
 .navbar {
-    background-color: #808080;
     font: Arial;
-    font-size: 20pt;
+    font-size: 12pt;
+    position: sticky;
 }
 
 a:link, a:visited {
-    font-size: 15pt;
-    background-color: #808080;
+    font-size: 12pt;
+    background-color: #8080808c;
     color: aliceblue;
     padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
 }
-
+    
 a:hover, a:active {
-    background-color: #5d5d5d;
+    background-color: #5d5d5dcd;
 }

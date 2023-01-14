@@ -8,7 +8,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -28,7 +27,7 @@ div.bottom {
 }
 
 html { 
-  background: url(https://wallpaperaccess.com/full/38582.jpg) no-repeat center center fixed; 
+  background: url("https://wallpaperaccess.com/full/38582.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
