@@ -4,24 +4,24 @@ import { Element } from 'react-scroll';
 import Introduction from './Introduction.jsx';
 import AboutMe from './AboutMe.jsx';
 import Contact from './Contact.jsx';
-import './App.css'; // Import your CSS file for styling
+import styles from './App.module.css'; // Import your CSS file for styling
 
 const App = () => {
   return (
-    <div className="app">
+    <div className={styles.app}>
       <Parallax bgImage="../photos/portrait.jpg" strength={500}>
-        <Element name="intro" className="element">
+        <Element name="intro" className={styles.element}>
           <Introduction />
         </Element>
       </Parallax>
 
       <Parallax bgImage="../photos/P6070282-Enhanced-NR.jpg" strength={500}>
-        <Element name="about" className="element">
+        <Element name="about" className={styles.element}>
           <AboutMe />
         </Element>
       </Parallax>
 
-      <Element name="contact" className="element">
+      <Element name="contact" className={styles.element}>
         <Contact />
       </Element>
     </div>

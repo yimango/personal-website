@@ -1,6 +1,6 @@
 // Components/SlideInText.jsx
 import React, { useEffect, useState } from 'react';
-import './SlideInText.css';
+import styles from './SlideInText.module.css';
 
 const SlideInText = ({ text }) => {
   const [visible, setVisible] = useState(false);
@@ -9,7 +9,7 @@ const SlideInText = ({ text }) => {
     setTimeout(() => setVisible(true), 500);
   }, []);
 
-  return <p className={`slide-in-text ${visible ? 'visible' : ''}`}>{text}</p>;
+  return <p className={[styles['slide-in-text'], ...(visible ? [styles.visible] : [])]}>{text}</p>;
 };
 
 export default SlideInText;
