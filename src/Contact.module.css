@@ -10,7 +10,11 @@
   width: 100%;
 }
 
-
+.footer .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
 .contact-info {
   text-align: left;
@@ -31,13 +35,7 @@
   text-decoration: none;
 }
 
-.resume-link {
-  margin-left: 20px; /* Adjust spacing */
-}
-
 .resume-icon {
-  width: 40px; /* Adjust icon size */
-  height: 40px;
   cursor: pointer;
 }
 
