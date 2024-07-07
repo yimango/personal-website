@@ -1,0 +1,46 @@
+/* Contact.css */
+
+.footer {
+  background-color: #cce5ff; /* Light blue background */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+
+.contact-info {
+  text-align: left;
+}
+
+.contact-item {
+  font-size: 0.8em;
+  margin: 5px 0;
+}
+
+.contact-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.contact-link {
+  color: #007bff; /* Example link color */
+  text-decoration: none;
+}
+
+.resume-link {
+  margin-left: 20px; /* Adjust spacing */
+}
+
+.resume-icon {
+  width: 40px; /* Adjust icon size */
+  height: 40px;
+  cursor: pointer;
+}
+
+.resume-icon:hover {
+  opacity: 0.8; /* Example hover effect */
+}
