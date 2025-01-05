@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react'
 import { Card, CardProps } from "@/components/ui/card"
 
-interface AnimatedCardProps extends CardProps {
+interface AnimatedCardProps extends Omit<CardProps, 'className'> {
   delay?: number;
+  children: React.ReactNode;
+  className?: string;
 }
 
-export function AnimatedCard({ children, className, delay = 0, ...props }: AnimatedCardProps) {
+export function AnimatedCard({ children, className = '', delay = 0, ...props }: AnimatedCardProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { SkillBadge } from "@/components/skill-badge"
-import { AnimatedCard } from "@/components/animated-card";
+import { AnimatedCard } from "@/components/animated-card"
 
 export default function About() {
   const programmingLanguages = ['Python', 'R', 'SQL', 'Java', 'C', 'C++', 'JavaScript', 'TypeScript', 'Bash'];
@@ -10,6 +10,7 @@ export default function About() {
   return (
     <div className="max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold mb-6 text-white">About Me</h1>
+
       <AnimatedCard className="mb-6" delay={100}>
         <CardHeader>
           <CardTitle className="text-white">Education</CardTitle>
@@ -22,6 +23,7 @@ export default function About() {
           <p className="text-gray-200">Applied Linear Models, Stochastic Processes, Computational Statistics, Linear Optimization</p>
         </CardContent>
       </AnimatedCard>
+
       <AnimatedCard className="mb-6" delay={200}>
         <CardHeader>
           <CardTitle className="text-white">Technical Skills</CardTitle>
