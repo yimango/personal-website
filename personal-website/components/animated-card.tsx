@@ -1,7 +1,8 @@
+
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Card, CardProps } from "@/components/ui/card"
+import { Card, CardProps } from "@/components/card"
 
 interface AnimatedCardProps extends Omit<CardProps, 'className'> {
   delay?: number;

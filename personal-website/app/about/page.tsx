@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { SkillBadge } from "@/components/skill-badge"
 import { AnimatedCard } from "@/components/animated-card"
 
