@@ -2,12 +2,13 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Justin Wang - Personal Website',
-  description: 'Software Engineer and Cloud Engineering Intern',
+  title: 'Justin Wang - Software Engineer',
+  description: 'Software Engineer passionate about automation, data analysis, and cloud technologies.',
 }
 
 export default function RootLayout({
@@ -16,34 +17,46 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} bg-gray-900 text-gray-100`}>
-        <div className="min-h-screen flex flex-col">
-          <header className="bg-gray-800/80 border-b border-gray-700 sticky top-0 z-10">
-            <nav className="container mx-auto flex justify-between items-center py-4 px-6">
-              <Link href="/" className="text-xl font-bold text-gray-100">Justin Wang</Link>
-              <ul className="flex space-x-6">
-                <li><Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link></li>
-                <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
-                <li><Link href="/experience" className="text-gray-300 hover:text-white transition-colors">Experience</Link></li>
-                <li><Link href="/projects" className="text-gray-300 hover:text-white transition-colors">Projects</Link></li>
-                <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
-              </ul>
-            </nav>
-          </header>
-          <main className="flex-grow container mx-auto px-6 py-8">
-            {children}
-          </main>
-          <footer className="bg-gray-800/80 text-white py-6">
-            <div className="container mx-auto px-6 text-center">
-              <p>© {new Date().getFullYear()} Justin Wang. All rights reserved.</p>
-              <div className="mt-2">
-                <a href="https://github.com/yimango" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white mx-2">GitHub</a>
-                <a href="https://www.linkedin.com/in/yi-wang9/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white mx-2">LinkedIn</a>
+    <html lang="en">
+      <body className={inter.className}>
+        <nav className="bg-black/20 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <Link href="/" className="text-xl font-bold text-white hover:text-blue-400 transition-colors">
+                Justin Wang
+              </Link>
+              <div className="hidden md:flex space-x-8">
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                  About
+                </Link>
+                <Link href="/experience" className="text-gray-300 hover:text-white transition-colors">
+                  Experience
+                </Link>
+                <Link href="/projects" className="text-gray-300 hover:text-white transition-colors">
+                  Projects
+                </Link>
+                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </div>
+              <div className="md:hidden">
+                <Button variant="ghost" size="sm" className="text-white">
+                  Menu
+                </Button>
               </div>
             </div>
-          </footer>
-        </div>
+          </div>
+        </nav>
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <footer className="bg-black/20 border-t border-gray-800 py-8 mt-16">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-gray-400">
+              © 2024 Justin Wang. Built with Next.js and Tailwind CSS.
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   )
