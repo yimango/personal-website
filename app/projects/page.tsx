@@ -1,6 +1,6 @@
 import { CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { AnimatedCard } from "@/components/animated-card"
-import { Github, ExternalLink } from 'lucide-react'
+import { Github } from 'lucide-react'
 
 export default function Projects() {
   return (
@@ -56,7 +56,7 @@ export default function Projects() {
             <ul className="list-disc pl-5 mt-2">
               <li>Built a rhythm-based Spotify web application that generates playlists customized to running pace</li>
               <li>Implemented OAuth 2.0 authentication with Spotify and JWT session management</li>
-              <li>Developed cadence-aware playlist generation using Spotify's recommendation API</li>
+              <li>Developed cadence-aware playlist generation using Spotify&apos;s recommendation API</li>
               <li>Created a modern UI with Next.js App Router, Tailwind CSS, and Radix UI</li>
             </ul>
           </CardContent>
