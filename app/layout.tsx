@@ -18,45 +18,47 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav className="bg-black/20 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <Link href="/" className="text-xl font-bold text-white hover:text-blue-400 transition-colors">
-                Justin Wang
-              </Link>
-              <div className="hidden md:flex space-x-8">
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About
+      <body className={`${inter.className} bg-cover bg-center bg-fixed bg-no-repeat`} style={{ backgroundImage: 'url(/background.jpeg)' }}>
+        <div className="min-h-screen bg-black/40 backdrop-blur-sm">
+          <nav className="bg-black/30 backdrop-blur-md border-b border-white/20 sticky top-0 z-50">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between items-center h-16">
+                <Link href="/" className="text-xl font-bold text-white hover:text-blue-300 transition-colors duration-300">
+                  Justin Wang
                 </Link>
-                <Link href="/experience" className="text-gray-300 hover:text-white transition-colors">
-                  Experience
-                </Link>
-                <Link href="/projects" className="text-gray-300 hover:text-white transition-colors">
-                  Projects
-                </Link>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </div>
-              <div className="md:hidden">
-                <Button variant="ghost" size="sm" className="text-white">
-                  Menu
-                </Button>
+                <div className="hidden md:flex space-x-8">
+                  <Link href="/about" className="text-gray-200 hover:text-white transition-colors duration-300 font-medium">
+                    About
+                  </Link>
+                  <Link href="/experience" className="text-gray-200 hover:text-white transition-colors duration-300 font-medium">
+                    Experience
+                  </Link>
+                  <Link href="/projects" className="text-gray-200 hover:text-white transition-colors duration-300 font-medium">
+                    Projects
+                  </Link>
+                  <Link href="/contact" className="text-gray-200 hover:text-white transition-colors duration-300 font-medium">
+                    Contact
+                  </Link>
+                </div>
+                <div className="md:hidden">
+                  <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+                    Menu
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-        </nav>
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <footer className="bg-black/20 border-t border-gray-800 py-8 mt-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-gray-400">
-              © 2024 Justin Wang. Built with Next.js and Tailwind CSS.
-            </p>
-          </div>
-        </footer>
+          </nav>
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <footer className="bg-black/30 backdrop-blur-md border-t border-white/20 py-8 mt-16">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <p className="text-gray-300 font-medium">
+                © 2024 Justin Wang. Built with Next.js and Tailwind CSS.
+              </p>
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   )
