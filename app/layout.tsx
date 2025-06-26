@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={`${inter.className} bg-cover bg-center bg-fixed bg-no-repeat`} style={{ backgroundImage: 'url(/background.jpeg)' }}>
         <div className="min-h-screen bg-black/40 backdrop-blur-sm">
           <nav className="bg-black/30 backdrop-blur-md border-b border-white/20 sticky top-0 z-50">
