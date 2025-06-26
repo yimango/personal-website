@@ -22,7 +22,7 @@ export function PhotoGalleryClient({ photos }: PhotoGalleryClientProps) {
   const [isUserScrolling, setIsUserScrolling] = useState(false)
   const [loadedFullImages, setLoadedFullImages] = useState<Set<string>>(new Set())
   const [transformX, setTransformX] = useState(0)
-  const [scrollSpeed, setScrollSpeed] = useState(1)
+  const scrollSpeed = 1
   const [userScrollOffset, setUserScrollOffset] = useState(0)
 
   // Calculate photo width including gap
